@@ -4,7 +4,7 @@ module DataMemory(input clk, input rst, input Rd, input Wr, input [10:0] address
 
 	reg [15:0] memory [0:2047];
 	
-	always@(posedge clk)
+	always@(clk)
 	begin
 		if(Rd) Out_Data = memory[address];
 		else
