@@ -5,22 +5,22 @@ module testBIP;
 	// Inputs
 	reg clk;
 	reg rst;
+	wire tx_out;
 
-	// Instantiate the Unit Under Test (UUT)
 	BIP uut (
 		.clk(clk), 
-		.rst(rst)
+		.rst(rst),
+		.tx_out(tx_out)
 	);
 
 	initial begin
-		// Initialize Inputs
+
 		clk = 0;
 		rst = 0;
-		// Wait 100 ns for global reset to finish
+
 		#4;
 		rst = 1;
-        
-		// Add stimulus here
+       
 
 	end
 	
