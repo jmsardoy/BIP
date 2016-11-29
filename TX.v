@@ -1,12 +1,13 @@
 `timescale 1ns / 1ps
 
 module TX
-	#( parameter stateA = 'b00001,
-		parameter stateB = 'b00010,
-		parameter stateC = 'b00100,
-		parameter stateD = 'b01000,
-		parameter stateE = 'b10000)
+	#( parameter stateA = 5'b00001,
+		parameter stateB = 5'b00010,
+		parameter stateC = 5'b00100,
+		parameter stateD = 5'b01000,
+		parameter stateE = 5'b10000)
 	(input clk,
+	 input rst,
     input baud_rate,
     input [7:0]d_in,
     input tx_start,
@@ -25,7 +26,9 @@ module TX
 	
 	always@(posedge clk)
 	begin
-		state=next_state;
+		/*if(rst == 0) state = 0;
+		else*/
+			state=next_state;
 	end
 
     always@(posedge clk)
@@ -46,6 +49,7 @@ module TX
             stateE:
                 if(tx_done == 1) next_state = stateA;
                 else next_state = stateE;
+				default: next_state = 0;
         endcase
     end
 
@@ -101,6 +105,7 @@ module TX
 						tx_done = 1;
 					end
             end
+				default: tx_done = 1;
         endcase
     end
                 

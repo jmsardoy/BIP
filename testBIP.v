@@ -20,6 +20,7 @@ module testBIP;
 
 		#4;
 		rst = 1;
+		
        
 
 	end

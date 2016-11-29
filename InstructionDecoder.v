@@ -95,6 +95,16 @@ module InstructionDecoder(
 					WrRam <= 0;
 					RdRam <= 0;
 				end
+				default:
+				begin
+					WrPC <= 0;
+					SelA <= 0;
+					SelB <= 0;
+					WrAcc <= 0;
+					Op <= 0;
+					WrRam <= 0;
+					RdRam <= 0;
+				end
 			endcase
 		end
 

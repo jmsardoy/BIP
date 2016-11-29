@@ -16,7 +16,7 @@ module Control(
 	 wire WrPC;
 	 reg [10:0] PC_In;
 	
-	always@(posedge clk)
+	always@(negedge clk)
 	begin
 		if(rst==0) program_counter = 0;
 		else

@@ -33,6 +33,7 @@ module Datapath(
 			0: out_SelA <= in_memory_data;
 			1: out_SelA <= extended_operand;
 			2: out_SelA <= Op_result;
+			default: out_SelA <= 0;
 		endcase
 	 end
 	 
@@ -42,6 +43,7 @@ module Datapath(
 		case(SelB)
 			0: out_SelB <= in_memory_data;
 			1: out_SelB <= extended_operand;
+			default: out_SelB <= 0;
 		endcase
 	 end
 	 
@@ -51,6 +53,8 @@ module Datapath(
 		case(Op)
 			0: Op_result <= ACC + out_SelB;
 			1: Op_result <= ACC - out_SelB;
+			default: Op_result <= ACC + out_SelB;
+
 		endcase
 	 end
 	 

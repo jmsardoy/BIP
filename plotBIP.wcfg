@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="/home/fede/DatosWindows/Facultad/Arquitectura de Computadoras/Trabajos Practicos/BIP/testBIP_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="/home/juanso/Desktop/BIP/testBIP_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="testBIP" />
@@ -15,17 +15,9 @@
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/testBIP/uut/clock/program_clk" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">program_clk</obj_property>
-      <obj_property name="ObjectShortName">program_clk</obj_property>
-   </wvobject>
    <wvobject fp_name="/testBIP/uut/out_baudrate" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">out_baudrate</obj_property>
       <obj_property name="ObjectShortName">out_baudrate</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testBIP/uut/clock/data_clk" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">data_clk</obj_property>
-      <obj_property name="ObjectShortName">data_clk</obj_property>
    </wvobject>
    <wvobject fp_name="/testBIP/rst" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">rst</obj_property>
@@ -46,6 +38,14 @@
    <wvobject fp_name="/testBIP/tx_out" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">tx_out</obj_property>
       <obj_property name="ObjectShortName">tx_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testBIP/uut/data_program_memory" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_program_memory[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_program_memory[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testBIP/uut/In_Data_memory" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">In_Data_memory[15:0]</obj_property>
+      <obj_property name="ObjectShortName">In_Data_memory[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testBIP/uut/state" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">state[2:0]</obj_property>

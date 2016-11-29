@@ -4,7 +4,7 @@ module ProgramMemory(input clk, input rst,input [10:0] address, output reg [15:0
 	
 	reg [15:0] memory [0:2047];
 	
-	always@(negedge clk)
+	always@(posedge clk)
 	begin
 		if(rst == 0)
 		begin
@@ -14,13 +14,10 @@ module ProgramMemory(input clk, input rst,input [10:0] address, output reg [15:0
 			memory[3] = 'b0001000000000001; //LD 1
 			memory[4] = 'b0010000000000001; //ADD 1
 			memory[5] = 0; //HALT
-			data = 0;
+			data = 'b1111111111111111;
 		end
-	end
-	
-	always@(negedge clk)
-	begin
-		data = memory[address];
+		else
+			data = memory[address];
 	end
 	
 
