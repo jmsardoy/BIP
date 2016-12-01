@@ -2,7 +2,7 @@
 
 module ProgramMemory(input clk, input rst,input [10:0] address, output reg [15:0] data);
 	
-	reg [15:0] memory [0:2047];
+	reg [15:0] memory [0:1023]; //la misma cantidad para que no tire warnings
 	
 	always@(posedge clk)
 	begin

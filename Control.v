@@ -25,16 +25,10 @@ module Control(
 	
 	InstructionDecoder decoder(.opcode(instruction[15:11]), .WrPC(WrPC), .SelA(SelA), .SelB(SelB), .WrAcc(WrAcc),
 										.Op(Op), .WrRam(WrRam), .RdRam(RdRam));
-	
-	
 
 	always@*
 	begin
 		PC_In = program_counter + 1;
 	end
-	
-	
-	
-	
 	
 endmodule

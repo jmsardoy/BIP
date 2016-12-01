@@ -37,12 +37,14 @@ module BIP(
 	
 	BaudRateGenerator baudrate(.clk(clk), .out(out_baudrate));
 	
-	TX tx(.clk(clk),.rst(rst), .baud_rate(out_baudrate), .d_in(tx_data_in), .tx_start(tx_start), .tx(tx_out),
+	TX tx(.clk(clk),/*.rst(rst),*/ .baud_rate(out_baudrate), .d_in(tx_data_in), .tx_start(tx_start), .tx(tx_out),
 			.tx_done(tx_done));
 	
 	
 	reg [3:0] state = 0;
 	reg [3:0] next_state = 0;
+	
+
 	
 	always@(posedge clk)
 	begin

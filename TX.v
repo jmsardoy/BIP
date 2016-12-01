@@ -7,7 +7,7 @@ module TX
 		parameter stateD = 5'b01000,
 		parameter stateE = 5'b10000)
 	(input clk,
-	 input rst,
+	//input rst,
     input baud_rate,
     input [7:0]d_in,
     input tx_start,
